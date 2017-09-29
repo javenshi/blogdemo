@@ -3,8 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
+<link rel="stylesheet" href="../resources/static/css/layui.css" media="all" />
+
 <body>
-index
+
+<textarea class="layui-textarea" id="LAY_demo1" style="display: none">
+
+</textarea>
+
+<div class="site-demo-button" style="margin-top: 20px;">
+    <button class="layui-btn site-demo-layedit" data-type="content">发表</button>
+
+</div>
+
+
+
+<script src="../resources/static/lay/dest/layui.all.js"></script>
+
+<script>
+    layui.use('layedit', function(){
+        var layedit = layui.layedit
+            ,$ = layui.jquery;
+
+        //构建一个默认的编辑器
+        var index = layedit.build('LAY_demo1');
+
+        //编辑器外部操作
+        var active = {
+            content: function(){
+                alert(layedit.getContent(index)); //获取编辑器内容
+            }
+            ,text: function(){
+                alert(layedit.getText(index)); //获取编辑器纯文本内容
+            }
+            ,selection: function(){
+                alert(layedit.getSelection(index));
+            }
+        };
+
+        $('.site-demo-layedit').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+        layedit.set({
+            uploadImage:{
+                url:'sss',
+                type:'post'
+            }
+        });
+        //自定义工具栏
+        layedit.build('LAY_demo2', {
+            tool: ['face', 'link', 'unlink', '|', 'left', 'center', 'right']
+            ,height: 100
+        })
+    });
+</script>
+<
+
 </body>
+
+
+
+
 </html>
