@@ -1,72 +1,504 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="keywords" content="fly,layui,前端社区">
+    <meta name="description" content="Fly社区是跨设备模块化前端框架layui的官网社区，致力于为web开发提供强劲动力">
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>开发者交流 - Fly社区</title>
+    <link rel="stylesheet"
+          href="../resources/static/css/font_24081_lyaxcfn8fp1iqkt9.css">
+    <link rel="stylesheet"
+          href="../resources/static/css/layui.css">
+    <link rel="stylesheet"
+          href="../resources/static/css/global.css"
+          charset="utf-8">
+    <script type="text/javascript" async="" charset="utf-8"
+            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/core.php"></script>
+    <link id="layuicss-layer" rel="stylesheet"
+          href="../resources/static/css/layer.css" media="all">
 </head>
-<link rel="stylesheet" href="../resources/static/css/layui.css" media="all" />
-
 <body>
-
-<textarea class="layui-textarea" id="LAY_demo1" style="display: none">
-
-</textarea>
-
-<div class="site-demo-button" style="margin-top: 20px;">
-    <button class="layui-btn site-demo-layedit" data-type="content">发表</button>
-
+<div class="fly-header layui-bg-black">
+    <div class="layui-container"><a class="fly-logo" href="http://fly.layui.com/"> <img
+            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/logo.png" alt="layui">
+    </a>
+        <ul class="layui-nav fly-nav layui-hide-xs">
+            <li class="layui-nav-item"><a href="http://fly.layui.com/"><i class="iconfont icon-jiaoliu"></i>交流</a></li>
+            <li class="layui-nav-item"><a href="http://fly.layui.com/case/2017/"><i
+                    class="iconfont icon-iconmingxinganli"></i>案例</a></li>
+            <li class="layui-nav-item"><a href="http://www.layui.com/"><i class="iconfont icon-ui"></i>框架</a></li>
+            <span class="layui-nav-bar" style="width: 0px; left: 0px; opacity: 0;"></span></ul>
+        <ul class="layui-nav fly-nav-user">
+            <li class="layui-nav-item"><a class="iconfont icon-touxiang layui-hide-xs"
+                                          href="http://fly.layui.com/user/login/"></a></li>
+            <li class="layui-nav-item"><a href="http://fly.layui.com/user/login/">登入</a></li>
+            <li class="layui-nav-item"><a href="http://fly.layui.com/user/reg/">注册</a></li>
+            <li class="layui-nav-item layui-hide-xs"><a href="http://fly.layui.com/app/qq"
+                                                        onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})"
+                                                        title="QQ登入" class="iconfont icon-qq"></a></li>
+            <li class="layui-nav-item layui-hide-xs"><a href="http://fly.layui.com/app/weibo/"
+                                                        onclick="layer.msg('正在通过微博登入', {icon:16, shade: 0.1, time:0})"
+                                                        title="微博登入" class="iconfont icon-weibo"></a></li>
+            <span class="layui-nav-bar"></span></ul>
+    </div>
 </div>
-
-
-
-<script src="../resources/static/lay/dest/layui.all.js"></script>
-
-<script>
-    layui.use('layedit', function(){
-        var layedit = layui.layedit
-            ,$ = layui.jquery;
-
-        //构建一个默认的编辑器
-        var index = layedit.build('LAY_demo1');
-
-        //编辑器外部操作
-        var active = {
-            content: function(){
-                alert(layedit.getContent(index)); //获取编辑器内容
-            }
-            ,text: function(){
-                alert(layedit.getText(index)); //获取编辑器纯文本内容
-            }
-            ,selection: function(){
-                alert(layedit.getSelection(index));
-            }
-        };
-
-        $('.site-demo-layedit').on('click', function(){
-            var type = $(this).data('type');
-            active[type] ? active[type].call(this) : '';
-        });
-        layedit.set({
-            uploadImage:{
-                url:'sss',
-                type:'post'
-            }
-        });
-        //自定义工具栏
-        layedit.build('LAY_demo2', {
-            tool: ['face', 'link', 'unlink', '|', 'left', 'center', 'right']
-            ,height: 100
-        })
-    });
-</script>
-<
-
+<div class="fly-panel fly-column">
+    <div class="layui-container">
+        <ul class="layui-clear">
+            <li class="layui-hide-xs "><a href="http://fly.layui.com/">首页</a></li>
+            <li><a href="http://fly.layui.com/column/quiz/"> 提问 </a></li>
+            <li class="layui-this"><a href="http://fly.layui.com/column/share/"> 分享 <span
+                    class="layui-badge-dot"></span> </a></li>
+            <li><a href="http://fly.layui.com/column/discuss/"> 讨论 </a></li>
+            <li><a href="http://fly.layui.com/column/suggest/"> 建议 </a></li>
+            <li><a href="http://fly.layui.com/column/notice/"> 公告 </a></li>
+            <li><a href="http://fly.layui.com/column/news/"> 动态 </a></li>
+        </ul>
+        <div class="fly-column-right layui-hide-xs"><span class="fly-search"><i class="layui-icon"></i></span> <a
+                href="http://fly.layui.com/jie/add/" class="layui-btn">发表新帖</a></div>
+        <div class="layui-hide-sm layui-show-xs-block"
+             style="margin-top: -10px; padding-bottom: 10px; text-align: center;"><a
+                href="http://fly.layui.com/jie/add/" class="layui-btn">发表新帖</a></div>
+    </div>
+</div>
+<div class="layui-container">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md8">
+            <div class="fly-panel" style="margin-bottom: 0;">
+                <div class="fly-panel-title fly-filter"><a href="http://fly.layui.com/column/share/" class="layui-this">综合</a><span
+                        class="fly-mid"></span><a href="http://fly.layui.com/column/share/unsolved/">未结</a><span
+                        class="fly-mid"></span><a href="http://fly.layui.com/column/share/solved/">已结</a><span
+                        class="fly-mid"></span><a href="http://fly.layui.com/column/share/wonderful/">精华</a></div>
+                <ul class="fly-list">
+                    <li><a href="http://fly.layui.com/u/529704" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/529704.jpg"
+                            alt="冷酷大师"> </a>
+                        <h2><a class="layui-badge">分享</a> <a
+                                href="http://fly.layui.com/jie/15636/">社区回帖，就不能加ctrl+enter吗</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/529704" link=""> <cite>冷酷大师</cite>
+                        </a> <span>17小时前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 20</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 7    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/5051928" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_005.jpg"
+                            alt="雀牌传说"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15634/">基于layui2.0及laravel5.5开发的社交博客!</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/5051928" link=""> <cite>雀牌传说</cite>
+                        </a> <span>17小时前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 20</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 2    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/6935040" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100.gif"
+                            alt="難嘚煳凃"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15616/">小白练手 为表格添加搜索功能 简易搜索
+                            高级搜索</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/6935040" link=""> <cite>難嘚煳凃</cite>
+                        </a> <span>1天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 20</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 5    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/4896192" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100.jpg"
+                            alt="幻幻Fate"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15602/">JS时间格式化代码</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/4896192" link=""> <cite>幻幻Fate</cite>
+                            <i class="layui-badge fly-badge-vip">VIP3</i> </a> <span>1天前</span> <span
+                                class="fly-list-kiss" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 20</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 6    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/1320816" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_009.jpg"
+                            alt="朕九州"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15601/">form
+                            verify的自定义ajax验证</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/1320816" link=""> <cite>朕九州</cite>
+                        </a> <span>1天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 20</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 5    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/3470712" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_006.jpg"
+                            alt="Templet360"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15592/">ThinkPHP5+Layui实现图片上传加预览</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/3470712" link="">
+                            <cite>Templet360</cite> </a> <span>1天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 20</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 1    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/3031896" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/3031896.png"
+                            alt="老邱"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15573/">再次分享一个C# 时间转换的算法吧
+                            主要是JS不太熟悉</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/3031896" link=""> <cite>老邱</cite> <i
+                                class="layui-badge fly-badge-vip">VIP3</i> </a> <span>1天前</span> <span
+                                class="fly-list-kiss" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 20</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 2    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/5574576" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_004.jpg"
+                            alt="xiaoz"> </a>
+                        <h2><a class="layui-badge">分享</a> <a
+                                href="http://fly.layui.com/jie/15570/">关于laypage总页数初始化的分享</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/5574576" link=""> <cite>xiaoz</cite>
+                        </a> <span>1天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 20</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 8    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/5737200" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/5737200.jpg"
+                            alt="TIMJAMES"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15569/">LayUI 2.0
+                            table列宽自动拉伸</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/5737200" link="">
+                            <cite>TIMJAMES</cite> </a> <span>1天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 20</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 6    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/6899760" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_008.jpg"
+                            alt="蚂蚁英雄"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15564/">JBPM4 在线流程设计器</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/6899760" link=""> <cite>蚂蚁英雄</cite>
+                        </a> <span>1天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 20</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 6    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/3031896" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/3031896.png"
+                            alt="老邱"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15430/">分享c# Flay社区 Ubb转Html
+                            代码</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/3031896" link=""> <cite>老邱</cite> <i
+                                class="layui-badge fly-badge-vip">VIP3</i> </a> <span>3天前</span> <span
+                                class="fly-list-kiss" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 10</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 5    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/1410360" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/1410360.gif"
+                            alt="Sooo"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15374/">LayIM
+                            设置已读和未读信息提示</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/1410360" link=""> <cite>Sooo</cite>
+                            <i class="layui-badge fly-badge-vip">VIP4</i> </a> <span>4天前</span> <span
+                                class="fly-list-kiss" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 10</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 2    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/6845664" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/6845664.jpg"
+                            alt="铁血总督"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15359/">【Layui 2.1.5
+                            功能开发】增加无法在数据表中使用自定义复选框模板列的功能</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/6845664" link=""> <cite>铁血总督</cite>
+                        </a> <span>4天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span
+                                class="layui-badge fly-badge-accept layui-hide-xs">已结</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 3    </span></div>
+                        <div class="fly-list-badge"><span class="layui-badge layui-bg-red">精帖</span></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/6845664" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/6845664.jpg"
+                            alt="铁血总督"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15358/">【Layui 2.1.5
+                            BUG修复】修复数据表格中复选框样式失真的BUG</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/6845664" link=""> <cite>铁血总督</cite>
+                        </a> <span>4天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span
+                                class="layui-badge fly-badge-accept layui-hide-xs">已结</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 1    </span></div>
+                        <div class="fly-list-badge"><span class="layui-badge layui-bg-red">精帖</span></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/3463656" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_002.gif"
+                            alt="微秀"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15357/">用layui的table输出数据</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/3463656" link=""> <cite>微秀</cite>
+                        </a> <span>4天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 1    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/6863136" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/11.jpg"
+                            alt="低调的猪子"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15349/">数据表格给指定行设置样式（比如修改背景）的方法</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/6863136" link=""> <cite>低调的猪子</cite>
+                        </a> <span>4天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 1    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/983808" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_011.jpg"
+                            alt="luck661"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15302/">layui上传文件进度条显示</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/983808" link=""> <cite>luck661</cite>
+                        </a> <span>6天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 1    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/6782664" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_007.jpg"
+                            alt="Surcy"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15261/">解决layui下拉选择框只能选择不能手动输入文字</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/6782664" link=""> <cite>Surcy</cite>
+                        </a> <span>7天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 5    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/1780632" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_002.jpg"
+                            alt="帅气的小盒"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15241/">layui
+                            table单元格编辑支持数字和laydate,并修复Data赋值重载，支持表格开关</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/1780632" link=""> <cite>帅气的小盒</cite>
+                        </a> <span>7天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 3    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/5907720" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/0.jpg"
+                            alt="千斤坠"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15143/">SELECT组件使用备忘</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/5907720" link=""> <cite>千斤坠</cite>
+                        </a> <span>8天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 1    </span></div>
+                        <div class="fly-list-badge"><span class="layui-badge layui-bg-red">精帖</span></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/5046048" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_010.jpg"
+                            alt="魔都老王987"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15141/">解决轮播组件carousel图片过长不居中问题</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/5046048" link="">
+                            <cite>魔都老王987</cite> </a> <span>8天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 1    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/11928" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/11928.png"
+                            alt="叔到用时方恨少"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15121/">layDate5.0.7动态限制最大最小日期</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/11928" link=""> <cite>叔到用时方恨少</cite>
+                        </a> <span>8天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 26    </span></div>
+                        <div class="fly-list-badge"><span class="layui-badge layui-bg-red">精帖</span></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/5322912" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/5322912.jpg"
+                            alt="niyo"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15055/">java后台快速开发框架automain发布，前端部分支持且仅支持layui</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/5322912" link=""> <cite>niyo</cite>
+                        </a> <span>9天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 21    </span></div>
+                        <div class="fly-list-badge"><span class="layui-badge layui-bg-red">精帖</span></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/6772920" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/9.jpg"
+                            alt="ohsorry"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15049/">使用layui开发的一个chrome插件。</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/6772920" link="">
+                            <cite>ohsorry</cite> </a> <span>9天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 5    </span></div>
+                        <div class="fly-list-badge"><span class="layui-badge layui-bg-red">精帖</span></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/1410360" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/1410360.gif"
+                            alt="Sooo"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/15037/">分享一个小tips
+                            在layim(一般是客服模式下会用到吧)聊天窗口的时候如果要动态的修改窗口的大</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/1410360" link=""> <cite>Sooo</cite>
+                            <i class="layui-badge fly-badge-vip">VIP4</i> </a> <span>9天前</span> <span
+                                class="fly-list-kiss" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 10</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 1    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/1410360" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/1410360.gif"
+                            alt="Sooo"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/14991/">分享一个js截图在layim里实现截图上传的功能</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/1410360" link=""> <cite>Sooo</cite>
+                            <i class="layui-badge fly-badge-vip">VIP4</i> </a> <span>10天前</span> <span
+                                class="fly-list-kiss" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 10</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 3    </span></div>
+                        <div class="fly-list-badge"><span class="layui-badge layui-bg-red">精帖</span></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/5208168" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/10.jpg"
+                            alt="iTRO"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/14975/">结合社区一位前辈贡献的代码，做了一个select
+                            tree </a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/5208168" link=""> <cite>iTRO</cite>
+                            <i class="layui-badge fly-badge-vip">VIP3</i> </a> <span>10天前</span> <span
+                                class="fly-list-kiss" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 10</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 8    </span></div>
+                        <div class="fly-list-badge"><span class="layui-badge layui-bg-red">精帖</span></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/4237464" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100.png"
+                            alt="じ辰╆紫天せ"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/14966/">layui.table
+                            反馈一个小的BUG与解决方案</a></h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/4237464" link=""> <cite>じ辰╆紫天せ</cite>
+                            <i class="layui-badge fly-badge-vip">VIP0</i> </a> <span>10天前</span> <span
+                                class="fly-list-kiss" title="悬赏飞吻"><i class="iconfont icon-kiss"></i> 10</span> <span
+                                class="fly-list-nums">       <i class="iconfont icon-pinglun1"
+                                                                title="回答"></i> 4    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/4340280" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/4340280.jpg"
+                            alt="AggerChen"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/14845/">分享一下tree 树形多选操作</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/4340280" link="">
+                            <cite>AggerChen</cite> </a> <span>14天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 9    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                    <li><a href="http://fly.layui.com/u/6194664" class="fly-avatar"> <img
+                            src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/100_003.jpg"
+                            alt="RingoChan"> </a>
+                        <h2><a class="layui-badge">分享</a> <a href="http://fly.layui.com/jie/14823/">自己重做了个table，喜欢的给个赞，前端大神手下留情</a>
+                        </h2>
+                        <div class="fly-list-info"><a href="http://fly.layui.com/u/6194664" link="">
+                            <cite>RingoChan</cite> </a> <span>14天前</span> <span class="fly-list-kiss" title="悬赏飞吻"><i
+                                class="iconfont icon-kiss"></i> 10</span> <span class="fly-list-nums">       <i
+                                class="iconfont icon-pinglun1" title="回答"></i> 8    </span></div>
+                        <div class="fly-list-badge"></div>
+                    </li>
+                </ul>
+                <div style="border-top: 1px dotted #e2e2e2; text-align: center;">
+                    <div class="laypage-main"><span class="laypage-curr">1</span><a
+                            href="http://fly.layui.com/column/share/page/2/">2</a><a
+                            href="http://fly.layui.com/column/share/page/3/">3</a><a
+                            href="http://fly.layui.com/column/share/page/4/">4</a><a
+                            href="http://fly.layui.com/column/share/page/2/" class="laypage-next">下一页</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md4">
+            <dl class="fly-panel fly-list-one">
+                <dt class="fly-panel-title">本周热议</dt>
+                <dd><a href="http://fly.layui.com/jie/15570/">关于laypage总页数初始化的分享</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 8</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15636/">社区回帖，就不能加ctrl+enter吗</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 7</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15602/">JS时间格式化代码</a> <span><i class="iconfont icon-pinglun1"></i> 6</span>
+                </dd>
+                <dd><a href="http://fly.layui.com/jie/15569/">LayUI 2.0 table列宽自动拉伸</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 6</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15564/">JBPM4 在线流程设计器</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 6</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15430/">分享c# Flay社区 Ubb转Html 代码</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 5</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15616/">小白练手 为表格添加搜索功能 简易搜索 高级搜索</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 5</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15601/">form verify的自定义ajax验证</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 5</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15359/">【Layui 2.1.5 功能开发】增加无法在数据表中使用自定义复选框模板列的功能</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 3</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15374/">LayIM 设置已读和未读信息提示</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 2</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15573/">再次分享一个C# 时间转换的算法吧 主要是JS不太熟悉</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 2</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15634/">基于layui2.0及laravel5.5开发的社交博客!</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 2</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15592/">ThinkPHP5+Layui实现图片上传加预览</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 1</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15357/">用layui的table输出数据</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 1</span></dd>
+                <dd><a href="http://fly.layui.com/jie/15349/">数据表格给指定行设置样式（比如修改背景）的方法</a> <span><i
+                        class="iconfont icon-pinglun1"></i> 1</span></dd>
+            </dl>
+            <div class="fly-panel">
+                <div class="fly-panel-title"> 钻级赞助商 <span class="fly-mid"></span> <a
+                        href="mailto:xianxin@layui.com?subject=%E5%92%A8%E8%AF%A2%20layui%E7%A4%BE%E5%8C%BA%20%E5%B9%BF%E5%91%8A%E8%B5%9E%E5%8A%A9%E5%95%86"
+                        class="fly-link fly-joinad    ">我要加入</a></div>
+                <div class="fly-panel-main" style="padding: 13px 15px;"><a
+                        href="mailto:xianxin@layui.com?subject=%E5%92%A8%E8%AF%A2%20layui%E7%A4%BE%E5%8C%BA%20%E5%B9%BF%E5%91%8A%E8%B5%9E%E5%8A%A9%E5%95%86"
+                        class="fly-zanzhu" time-limit="2017.09.25-2099.01.01-">虚席以待，高性价比推广你的平台</a></div>
+            </div>
+            <div class="fly-panel" style="padding: 20px 0; text-align: center;"><img
+                    src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/168_1501894831075_19619.jpg"
+                    style="max-width: 100%;" alt="layui">
+                <p style="position: relative; color: #666;">微信扫码关注 layui 公众号</p></div>
+        </div>
+    </div>
+</div>
+<div class="fly-footer"><p><a href="http://fly.layui.com/">Fly社区</a> 2017 © <a
+        href="http://www.layui.com/">layui.com</a></p>
+    <p><a href="http://fly.layui.com/jie/3147.html" target="_blank">产品授权</a> <a
+            href="http://fly.layui.com/jie/8157.html" target="_blank">获取Fly社区模版</a> <a
+            href="http://fly.layui.com/jie/2461.html" target="_blank">微信公众号</a></p></div>
+<script src="../resources/static/layui.js"></script>
+<script>layui.cache.page = 'jie';
+layui.cache.user = {
+    username: '游客',
+    uid: -1,
+    avatar: 'http://res.layui.com/images/fly/avatar/00.jpg',
+    experience: 0,
+    sum: 0,
+    vip: 0,
+    sex: ''
+};
+layui.config({version: "1506653081836"}).extend({'fly': '//res.layui.com/lay/modules/fly/index'}).use('fly');</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_30088308'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/c.php%3Fid%3D30088308' type='text/javascript'%3E%3C/script%3E"));</script>
+<span id="cnzz_stat_icon_30088308"></span>
+<script src="%E5%BC%80%E5%8F%91%E8%80%85%E4%BA%A4%E6%B5%81%20-%20Fly%E7%A4%BE%E5%8C%BA_files/c.php"
+        type="text/javascript"></script>
+<ul class="layui-fixbar">
+    <li class="layui-icon" lay-type="bar1" style="background-color:#009688"></li>
+    <li class="layui-icon layui-fixbar-top" lay-type="top" style="background-color:#009688"></li>
+</ul>
 </body>
-
-
-
-
 </html>
