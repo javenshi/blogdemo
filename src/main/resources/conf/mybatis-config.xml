@@ -32,10 +32,7 @@
 
 
 
-    <typeAliases>
 
-        <package name="com.syj.blog.entity"/>
-    </typeAliases>
 
 
 
