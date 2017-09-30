@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MainController {
-    @Autowired(required = false)
+    @Autowired
     private BlogsDao blogsDao;
 
     @RequestMapping(value = {"","/"})
